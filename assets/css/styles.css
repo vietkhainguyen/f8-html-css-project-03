@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --header-bg: #10375c;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -11,6 +15,67 @@ body {
   font-family: "Sora", sans-serif;
 }
 
+/* Common */
+
 a {
   text-decoration: none;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  max-width: calc(100% - 48px);
+}
+
+/* Header */
+
+.header {
+  min-height: 100vh;
+  background-color: var(--header-bg);
+}
+
+.logo {
+  font-size: 1rem;
+  display: inline-flex;
+  position: relative;
+}
+
+.logo__circle::before,
+.logo__circle::after {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.logo__circle::before {
+  background: #2e80ec;
+  width: 3em;
+  height: 3em;
+}
+
+.logo__circle::after {
+  background: #fff;
+  width: 1.6em;
+  height: 1.6em;
+  position: absolute;
+  top: 1.1em;
+  left: 1.1em;
+}
+
+.logo__brand {
+  display: block;
+  font-size: 1.8em;
+  font-weight: 400;
+  color: #fff;
+}
+
+.logo__text {
+  margin-left: 0.6em;
+  text-align: right;
+  line-height: 1.6em;
+}
+
+.logo__brand--small {
+  font-size: 1.2em;
+  font-weight: 300;
 }
