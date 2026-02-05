@@ -90,6 +90,9 @@
     <!-- Reset CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <!-- Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Header -->
@@ -136,7 +139,9 @@
         <section class="hero">
           <!-- Hero content -->
           <section class="hero__content">
-            <h1 class="hero__heading">Exceptional dental care for all ages.</h1>
+            <h1 class="hero__heading" data-aos="fade-right">
+              Exceptional dental care for all ages.
+            </h1>
             <p class="hero__desc">
               Exceptional dental care for all ages. Your great smile begins with
               a great dentist.
@@ -171,7 +176,13 @@
 
           <div class="service__row">
             <figure>
-              <img src="./assets/img/hero-01.jpg" alt="" class="service__img" />
+              <img
+                src="./assets/img/hero-01.jpg"
+                alt=""
+                class="service__img"
+                data-aos="fade-up-right"
+                data-aos-once="false"
+              />
             </figure>
             <div>
               <div class="service__list">
@@ -745,5 +756,9 @@
         </div>
       </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
